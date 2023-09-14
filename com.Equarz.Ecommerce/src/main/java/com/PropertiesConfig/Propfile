@@ -1,5 +1,18 @@
 browser=chrome
+url1=http://e-quarz.com/customer/auth/sign-up
 url=http://e-quarz.com/customer/auth/login
-
 username=jakkamsairam3@gmail.com
 password=Namo@12345
+
+Firstname= Satish 
+
+Lastname=  Kunchanapalli 
+
+Email= satish99.marolix@gmail.com
+
+Password= Equarz5#
+	
+ConfirmPassword= Equarz5#
+searchboxtext=laptop
+	
+	

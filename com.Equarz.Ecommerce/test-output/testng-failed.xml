@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hospiol.Testcases.LoginTest">
+      <class name="com.Equarz.Testcases.Search">
         <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-          <include name="verifyurl"/>
-          <include name="verifylogin"/>
+          <include name="verfy"/>
+          <include name="Intialzation"/>
+          <include name="clos"/>
         </methods>
-      </class> <!-- com.hospiol.Testcases.LoginTest -->
+      </class> <!-- com.Equarz.Testcases.Search -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
