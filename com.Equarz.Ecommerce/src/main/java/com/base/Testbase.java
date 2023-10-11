@@ -22,6 +22,7 @@ public class Testbase {
 	public static WebDriver driver;
 	public WebDriverWait wait;
 	public String window1;
+	public String sheet;
 	
 
 	public Testbase() {
