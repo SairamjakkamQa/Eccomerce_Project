@@ -16,7 +16,7 @@ import com.Utils.Utils;
 import com.base.Testbase;
 
 public class Address_functionality extends Testbase {
-	Utils uts = new Utils();
+	//Utils uts = new Utils();
 	Actions act = new Actions(driver);
 	int i;
 	@FindBy(xpath = "//small[text()='Hello, sairam']")

@@ -13,8 +13,8 @@ public class AddressTest extends Testbase {
 	Login_Functionality Login;
 	Address_functionality Af;
 	Utils uts;
-	private final String sheetname = "Address";
-	private final String sheetname1 = "EditAddress";
+	public final String sheetname = "Address";
+	public final String sheetname1 = "EditAddress";
 
 	public AddressTest() {
 		super();
@@ -35,6 +35,7 @@ public class AddressTest extends Testbase {
 		Setup();
 		Login = new Login_Functionality(driver);
 		Af = new Address_functionality(driver);
+		uts=new Utils();
 		Login.Verifylogin();
 	}
 
