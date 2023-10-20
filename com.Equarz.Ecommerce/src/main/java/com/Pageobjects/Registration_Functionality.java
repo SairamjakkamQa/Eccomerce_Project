@@ -5,16 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.Utils.Utils;
 import com.base.Testbase;
 import com.hospiol.pageobjects.Homepage;
 
 public class Registration_Functionality extends Testbase{
-//	public String first="";
-//	public String last="";
-//	public String emailid="";
-//	public String Phonenum="";
-//	public String Password1="";
-//	public String Confirmpassword="";
+	Utils ut=new Utils();
+
 	@FindBy(xpath = "//input[@name='f_name']")
 	WebElement firstname;
 	
@@ -47,7 +44,8 @@ public class Registration_Functionality extends Testbase{
 	public Homepage Regdetails(String first,String last,String emailid,
 			String Phonenum,String Password1,String Confirmpassword) throws Throwable 
 	{
-		//System.out.println(first+last+emailid+Phonenum+Password1+Confirmpassword);
+		
+		
 		firstname.sendKeys(first);
 		lastname.sendKeys(last);
 		email.sendKeys(emailid);

@@ -1,5 +1,9 @@
 package com.Utils;
 
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Set;
@@ -18,17 +22,18 @@ import com.base.Testbase;
 
 public class Utils extends Testbase
 {
+	//private static final String filepath=;
 	@FindBy(xpath = " //a[@class='navbar-brand d-none d-sm-block mr-3 flex-shrink-0 __min-w-7rem']")
 	WebElement logo;
 	
-	@DataProvider
+	//@DataProvider
 
-	public String[][] setdata() throws Throwable {
+	public String[][] setdata(String sheetname) throws Throwable {
 
-		File file = new File("./src/main/java/com/testdata/Registration data.xlsx");
+		File file = new File("C:\\Users\\chakr\\Desktop\\Registration data.xlsx");
 		FileInputStream stream = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(stream);
-		XSSFSheet sheet = workbook.getSheetAt(0);
+		XSSFSheet sheet = workbook.getSheet(sheetname);
 
 		int rows = sheet.getPhysicalNumberOfRows();
 		int columns = sheet.getRow(1).getLastCellNum();
@@ -60,6 +65,21 @@ public class Utils extends Testbase
 		}
 		return new homepage();
 	}
+	public static void robo() throws Throwable
+	{
+		Robot robo=new Robot();
+		robo.delay(3000);
+
+		StringSelection upload=new StringSelection("C:\\Users\\sree\\Downloads\\pic");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(upload, null);
+		robo.keyPress(KeyEvent.VK_CONTROL);
+		robo.keyPress(KeyEvent.VK_V);
+		robo.keyRelease(KeyEvent.VK_CONTROL);
+		robo.keyRelease(KeyEvent.VK_V);
+		robo.keyPress(KeyEvent.VK_ENTER);
+		robo.keyRelease(KeyEvent.VK_ENTER);
+	}
+
 	
 	
 

@@ -9,7 +9,10 @@ import com.Utils.Utils;
 import com.base.Testbase;
 
 public class RegTest extends Testbase {
+	
 	Registration_Functionality rf;
+	Utils ut;
+	
 	
 	public RegTest()
 	{
@@ -20,7 +23,10 @@ public class RegTest extends Testbase {
 	{
 		Setup();
 		rf=new Registration_Functionality(driver);
+		ut=new Utils();
+		
 	}
+	
 	@Test(priority = 1)
 	public void Givenurl() 
 	{
@@ -31,6 +37,8 @@ public class RegTest extends Testbase {
 	public void Registration(String first,String last,String emailid,
 			String Phonenum,String Password1,String Confirmpassword) throws Throwable
 	{
+		
+		
 		rf.Regdetails(first, last, emailid, Phonenum, Password1, Confirmpassword);
 		
 	}
